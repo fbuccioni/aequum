@@ -1,6 +1,6 @@
 {
     "name": "@fbuccioni/mongoose",
-    "version": "10.0.0-alpha01",
+    "version": "10.0.0-alpha02",
     "description": "fbuccioni's mongoose tools for repository, pagination, crudl, configs and utils ",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/nodejs-packages",
@@ -14,9 +14,9 @@
         "access": "public"
     },
     "dependencies": {
-        "@fbuccioni/crudl": "^10.0.0-alpha01",
-        "@fbuccioni/exceptions": "^10.0.0-alpha01",
-        "@fbuccioni/paginate-common": "^10.0.0-alpha01",
+        "@fbuccioni/crudl": "^10.0.0-alpha02",
+        "@fbuccioni/exceptions": "^10.0.0-alpha02",
+        "@fbuccioni/paginate-common": "^10.0.0-alpha02",
         "mongoose": ">=8.8.0",
         "mongoose-paginate-v2": ">=1.8.0"
     }

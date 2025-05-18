@@ -1,6 +1,6 @@
 {
     "name": "@fbuccioni/geojson-models",
-    "version": "10.0.0-alpha01",
+    "version": "10.0.0-alpha02",
     "description": "GeoJSON models with `class-validator`",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/nodejs-packages",

@@ -1,6 +1,6 @@
 {
     "name": "@fbuccioni/crudl",
-    "version": "10.0.0-alpha01",
+    "version": "10.0.0-alpha02",
     "description": "fbuccioni's CRUDL operations common components",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/nodejs-packages",
@@ -14,6 +14,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@fbuccioni/paginate-common": "^10.0.0-alpha01"
+        "@fbuccioni/paginate-common": "^10.0.0-alpha02"
     }
 }
