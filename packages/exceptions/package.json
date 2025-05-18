@@ -1,6 +1,6 @@
 {
     "name": "@fbuccioni/exceptions",
-    "version": "10.0.0-alpha02",
+    "version": "10.0.0-alpha01",
     "description": "Common exceptions collection",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/nodejs-packages",
@@ -14,6 +14,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@fbuccioni/utils": "^10.0.0-alpha02"
+        "@fbuccioni/utils": "^10.0.0-alpha01"
     }
 }

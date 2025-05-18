@@ -1,6 +1,6 @@
 {
     "name": "@fbuccioni/validators",
-    "version": "10.0.0-alpha02",
+    "version": "10.0.0-alpha01",
     "description": "Custom validators for `class-validator`",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/nodejs-packages",
