@@ -1,0 +1,14 @@
+{
+    "files": [],
+    "references": [
+        { "path": "./crudl/tsconfig.build.json" },
+        { "path": "./exceptions/tsconfig.build.json" },
+        { "path": "./geojson-models/tsconfig.build.json" },
+        { "path": "./mongoose/tsconfig.build.json" },
+        { "path": "./paginate-common/tsconfig.build.json" },
+        { "path": "./typeorm/tsconfig.build.json" },
+        { "path": "./types/tsconfig.build.json" },
+        { "path": "./utils/tsconfig.build.json" },
+        { "path": "./validators/tsconfig.build.json" }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "extends": "../tsconfig.build.json",
+    "compilerOptions": {
+        "outDir": ".",
+        "rootDir": ".",
+        "paths": {
+            "@fbuccioni/crudl": [ "../crudl" ],
+            "@fbuccioni/exceptions": [ "../exceptions" ],
+            "@fbuccioni/exceptions/*": [ "../exceptions/*" ],
+            "@fbuccioni/paginate-common": [ "../paginate-common" ],
+            "@fbuccioni/utils": [ "../utils" ],
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test/**/*",
+        "*.spec.ts"
+    ],
+    "references": [
+        { "path": "../crudl/tsconfig.build.json" },
+        { "path": "../exceptions/tsconfig.build.json" },
+        { "path": "../paginate-common/tsconfig.build.json" },
+        { "path": "../utils/tsconfig.build.json" },
+    ]
+}

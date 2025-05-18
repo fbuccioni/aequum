@@ -1,8 +1,8 @@
 export class BaseException extends Error {
-    static code: string = null;
-    static HTTPStatusCode: number = undefined;
+    static code: string | null = null;
+    static HTTPStatusCode?: number = undefined;
 
-    readonly code = undefined;
+    readonly code: string | null = null;
 
     constructor(message: string, options?: Record<string, any>, stack?: string) {
         super(message, options);

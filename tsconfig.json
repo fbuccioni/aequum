@@ -1,33 +1,41 @@
 {
     "compilerOptions": {
-        "target": "es2022",
-        "module": "commonjs",
-        "declaration": false,
-        "removeComments": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
+        "allowJs": true,
         "allowSyntheticDefaultImports": true,
-        "useDefineForClassFields": false,
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "module": "commonjs",
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
         "sourceMap": true,
+        "target": "es2022",
         "outDir": "./dist",
         "baseUrl": "./",
-        "allowJs": true,
         "incremental": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "resolveJsonModule": true,
+        "useDefineForClassFields": false,
+        "paths": {
+            "@fbuccioni/crudl": [ "./packages/crudl" ],
+            "@fbuccioni/exceptions": [ "./packages/exceptions" ],
+            "@fbuccioni/exceptions/*": [ "./packages/exceptions/*" ],
+            "@fbuccioni/geojson-models": [ "./packages/geojson-models" ],
+            "@fbuccioni/mongoose/*": [ "./packages/mongoose/*" ],
+            "@fbuccioni/paginate-common": [ "./packages/paginate-common" ],
+            "@fbuccioni/typeorm/*": [ "./packages/typeorm/*" ],
+            "@fbuccioni/types": [ "./packages/types" ],
+            "@fbuccioni/utils": [ "./packages/utils" ],
+            "@fbuccioni/validators": [ "./packages/validators" ]
+        }
     },
     "include": [
-        "src/",
-        "./src/**/*.ts",
-        "test",
-        "e2e",
-        "integration"
+        "packages/**/*"
     ],
     "exclude": [
         "node_modules",
-        "dist",
-        "prod"
+        "**/*.spec.ts",
+        "gulpfile.js",
     ]
 }
 

@@ -24,6 +24,8 @@ export default tseslint.config(
             'prod/**',
             '.husky/**',
             '.git/**',
+            'eslint.config.mjs',
+            'gulpfile.js',
         ],
     },
     eslint.configs.recommended,
