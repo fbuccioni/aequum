@@ -1,0 +1,22 @@
+{
+    "name": "@fbuccioni/typeorm",
+    "version": "10.0.0-alpha01",
+    "description": "fbuccioni's TypeORM tools for repository, pagination, crudl, configs and utils ",
+    "author": "Felipe Buccioni",
+    "homepage": "https://github.com/fbuccioni/nodejs-packages",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fbuccioni/nodejs-packages.git",
+        "directory": "packages/typeorm"
+    },
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@fbuccioni/crudl": "^10.0.0-alpha01",
+        "@fbuccioni/exceptions": "^10.0.0-alpha01",
+        "@fbuccioni/paginate-common": "^10.0.0-alpha01",
+        "typeorm": ">=0.3.0 || <1.0.0"
+    }
+}

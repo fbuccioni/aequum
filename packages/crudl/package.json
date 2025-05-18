@@ -1,0 +1,19 @@
+{
+    "name": "@fbuccioni/crudl",
+    "version": "10.0.0-alpha01",
+    "description": "fbuccioni's CRUDL operations common components",
+    "author": "Felipe Buccioni",
+    "homepage": "https://github.com/fbuccioni/nodejs-packages",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fbuccioni/nodejs-packages.git",
+        "directory": "packages/crudl"
+    },
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@fbuccioni/paginate-common": "^10.0.0-alpha01"
+    }
+}
