@@ -17,16 +17,16 @@
         "incremental": true,
         "useDefineForClassFields": false,
         "paths": {
-            "@fbuccioni/crudl": [ "./packages/crudl" ],
-            "@fbuccioni/exceptions": [ "./packages/exceptions" ],
-            "@fbuccioni/exceptions/*": [ "./packages/exceptions/*" ],
-            "@fbuccioni/geojson-models": [ "./packages/geojson-models" ],
-            "@fbuccioni/mongoose/*": [ "./packages/mongoose/*" ],
-            "@fbuccioni/paginate-common": [ "./packages/paginate-common" ],
-            "@fbuccioni/typeorm/*": [ "./packages/typeorm/*" ],
-            "@fbuccioni/types": [ "./packages/types" ],
-            "@fbuccioni/utils": [ "./packages/utils" ],
-            "@fbuccioni/validators": [ "./packages/validators" ]
+            "@aequum/crudl": [ "./packages/crudl" ],
+            "@aequum/exceptions": [ "./packages/exceptions" ],
+            "@aequum/exceptions/*": [ "./packages/exceptions/*" ],
+            "@aequum/geojson-models": [ "./packages/geojson-models" ],
+            "@aequum/mongoose/*": [ "./packages/mongoose/*" ],
+            "@aequum/paginate-common": [ "./packages/paginate-common" ],
+            "@aequum/typeorm/*": [ "./packages/typeorm/*" ],
+            "@aequum/types": [ "./packages/types" ],
+            "@aequum/utils": [ "./packages/utils" ],
+            "@aequum/validators": [ "./packages/validators" ]
         }
     },
     "include": [

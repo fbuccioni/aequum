@@ -11,7 +11,7 @@ const distFiles = src([ 'packages/**/*.js', 'packages/**/*.d.ts' ]);
  * Moves the compiled nest files into "node_module" folder.
  */
 function moveToNodeModules() {
-    return distFiles.pipe(dest('node_modules/@fbuccioni'));
+    return distFiles.pipe(dest('node_modules/@aequum'));
 }
 
 /**
@@ -36,7 +36,7 @@ function moveToSamples() {
     }
 
     return flattenedSampleDirs.reduce(
-        (distFile, dir) => distFile.pipe(dest(join(dir, 'node_modules', '@fbuccioni'))),
+        (distFile, dir) => distFile.pipe(dest(join(dir, 'node_modules', '@aequum'))),
         distFiles,
     );
 }

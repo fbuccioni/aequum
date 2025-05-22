@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 import 'mongoose-paginate-v2';
-import { PaginateSortBy, sortStringToPaginateSortBy } from '@fbuccioni/paginate-common';
+import { PaginateSortBy, sortStringToPaginateSortBy } from '@aequum/paginate-common';
 
 import { MongoosePaginatedRepository } from '../../repository/paginated';
 import { BaseCRUDLMongooseService } from '..';

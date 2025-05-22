@@ -1,4 +1,4 @@
-import { data as dataUtil } from '@fbuccioni/utils';
+import { data as dataUtil } from '@aequum/utils';
 
 import { BaseException } from '../base.exception';
 import { ValidationException } from '../validation/validation.exception';

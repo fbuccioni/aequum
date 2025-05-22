@@ -4,7 +4,7 @@
         "outDir": ".",
         "rootDir": ".",
         "paths": {
-            "@fbuccioni/paginate-common": [ "../paginate-common" ]
+            "@aequum/paginate-common": [ "../paginate-common" ]
         }
     },
     "exclude": [

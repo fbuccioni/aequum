@@ -1,4 +1,4 @@
-import { DuplicateEntryException } from '@fbuccioni/exceptions/data';
+import { DuplicateEntryException } from '@aequum/exceptions/data';
 
 
 type PossiblyMongoServerError = Error & { code: number }

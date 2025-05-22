@@ -1,5 +1,5 @@
 import { IsEnum, IsObject, IsOptional, ValidateNested } from 'class-validator';
-import { IsNumberOrString } from '@fbuccioni/validators';
+import { IsNumberOrString } from '@aequum/validators';
 
 import {
     GeometryCollection,

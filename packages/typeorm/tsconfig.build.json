@@ -4,11 +4,11 @@
         "outDir": ".",
         "rootDir": ".",
         "paths": {
-            "@fbuccioni/crudl": [ "../crudl" ],
-            "@fbuccioni/exceptions": [ "../exceptions" ],
-            "@fbuccioni/exceptions/*": [ "../exceptions/*" ],
-            "@fbuccioni/paginate-common": [ "../paginate-common" ],
-            "@fbuccioni/utils": [ "../utils" ],
+            "@aequum/crudl": [ "../crudl" ],
+            "@aequum/exceptions": [ "../exceptions" ],
+            "@aequum/exceptions/*": [ "../exceptions/*" ],
+            "@aequum/paginate-common": [ "../paginate-common" ],
+            "@aequum/utils": [ "../utils" ],
         }
     },
     "exclude": [

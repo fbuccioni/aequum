@@ -4,7 +4,7 @@
         "outDir": ".",
         "rootDir": ".",
         "paths": {
-            "@fbuccioni/utils": [ "../utils" ]
+            "@aequum/utils": [ "../utils" ]
         }
     },
     "exclude": [

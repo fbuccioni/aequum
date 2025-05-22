@@ -1,6 +1,6 @@
 {
-  "name": "@fbuccioni/utils",
-  "title": "fbuccioni utils",
+  "name": "@aequum/utils",
+  "title": "aequum apps utils",
   "version": "0.10.0",
   "description": "Util functions for different usages",
   "author": {
@@ -10,7 +10,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fbuccioni/nodejs-packages.git"
+    "url": "https://github.com/fbuccioni/aequum.git"
   },
   "scripts": {
     "build": "tsc -b -v packages",
@@ -25,12 +25,12 @@
     "lint:packages": "NODE_OPTIONS='--max-old-space-size=4096' npx eslint 'packages/**/**.ts' --ignore-pattern 'packages/**/*.spec.ts'",
     "lint:ci": "concurrently 'npm run lint:packages' 'npm run lint:spec'",
     "prerelease": "gulp copy-misc",
-    "publish": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --force-publish --access public --exact -m \"chore(@nestjs) publish %s release\"",
+    "publish": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --force-publish --access public --exact -m \"chore(@aequum) publish %s release\"",
     "prepublishOnly": "npm run changelog | pbcopy",
-    "publish:beta": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=beta --access public -m \"chore(@nestjs) publish %s release\"",
-    "publish:next": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=next --access public --skip-git -m \"chore(@nestjs) publish %s release\"",
-    "publish:rc": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=rc --access public -m \"chore(@nestjs) publish %s release\"",
-    "publish:test": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --force-publish --access public --npm-tag=test --skip-git -m \"chore(@nestjs) publish %s release\"",
+    "publish:beta": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=beta --git-remote gh --access public -m \"chore(@aequum) publish %s release\"",
+    "publish:next": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=next --git-remote gh  --access public --skip-git -m \"chore(@aequum) publish %s release\"",
+    "publish:rc": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=rc --git-remote gh  --access public -m \"chore(@aequum) publish %s release\"",
+    "publish:test": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --force-publish --git-remote gh  --access public --npm-tag=test --skip-git -m \"chore(@aequum) publish %s release\"",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -54,6 +54,7 @@
     "lint-staged": "^16.0.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
+    "typedoc": "^0.28.4",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.29.0"
   },

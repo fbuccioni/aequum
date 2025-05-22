@@ -1,4 +1,4 @@
-import { PaginateSortBy } from "@fbuccioni/paginate-common";
+import { PaginateSortBy } from "@aequum/paginate-common";
 
 import { BaseCRUDLService } from "./base-crudl.service";
 

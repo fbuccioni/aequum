@@ -4,16 +4,16 @@
         "outDir": ".",
         "rootDir": ".",
         "paths": {
-            "@fbuccioni/crudl": [ "../crudl" ],
-            "@fbuccioni/exceptions": [ "../exceptions" ],
-            "@fbuccioni/exceptions/*": [ "../exceptions/*" ],
-            "@fbuccioni/geojson-models": [ "../geojson-models" ],
-            "@fbuccioni/mongoose/*": [ "../mongoose/*" ],
-            "@fbuccioni/paginate-common": [ "../paginate-common" ],
-            "@fbuccioni/typeorm/*": [ "../typeorm/*" ],
-            "@fbuccioni/types": [ "../types" ],
-            "@fbuccioni/utils": [ "../utils" ],
-            "@fbuccioni/validators": [ "../validators" ]
+            "@aequum/crudl": [ "../crudl" ],
+            "@aequum/exceptions": [ "../exceptions" ],
+            "@aequum/exceptions/*": [ "../exceptions/*" ],
+            "@aequum/geojson-models": [ "../geojson-models" ],
+            "@aequum/mongoose/*": [ "../mongoose/*" ],
+            "@aequum/paginate-common": [ "../paginate-common" ],
+            "@aequum/typeorm/*": [ "../typeorm/*" ],
+            "@aequum/types": [ "../types" ],
+            "@aequum/utils": [ "../utils" ],
+            "@aequum/validators": [ "../validators" ]
         }
     },
     "exclude": [

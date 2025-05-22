@@ -1,5 +1,5 @@
 import { RootFilterQuery } from "mongoose";
-import { BaseCRUDLService } from "@fbuccioni/crudl";
+import { BaseCRUDLService } from "@aequum/crudl";
 
 import { MongooseRepository } from "../repository";
 import { duplicateEntryExceptionOrError } from '../utils/mongoose.util';
