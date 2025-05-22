@@ -1,5 +1,5 @@
 import { AnyKeys, HydratedDocument, Model as MongooseModel, RootFilterQuery, UpdateQuery } from 'mongoose';
-import { NotFoundException } from "@aequum/exceptions/data";
+import { NotFoundException }from '@aequum/exceptions/data';
 
 
 type AnyObject = { [ key: string ]: any };
