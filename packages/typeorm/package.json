@@ -1,6 +1,6 @@
 {
     "name": "@aequum/typeorm",
-    "version": "10.0.0-alpha03",
+    "version": "10.0.0-alpha04",
     "description": "aequum TypeORM tools for repository, pagination, CRUD/CRUDL, configs and utils ",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
@@ -14,9 +14,9 @@
         "access": "public"
     },
     "dependencies": {
-        "@aequum/crudl": "^10.0.0-alpha03",
-        "@aequum/exceptions": "^10.0.0-alpha03",
-        "@aequum/paginate-common": "^10.0.0-alpha03",
+        "@aequum/crudl": "^10.0.0-alpha04",
+        "@aequum/exceptions": "^10.0.0-alpha04",
+        "@aequum/paginate-common": "^10.0.0-alpha04",
         "typeorm": ">=0.3.0 || <1.0.0"
     }
 }
