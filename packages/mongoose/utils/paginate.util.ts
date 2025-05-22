@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 import 'mongoose-paginate-v2';
-import { PaginateSortBy, PaginateResult } from "@aequum/paginate-common";
+import { PaginateSortBy, PaginateResult }from '@aequum/paginate-common';
 
-import { defaultMongoosePaginateOptions } from "../options/default-mongoose-paginator.options";
+import { defaultMongoosePaginateOptions }from '../options/default-mongoose-paginator.options';
 
 
 /** @ignore */

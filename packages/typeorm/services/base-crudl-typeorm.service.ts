@@ -1,5 +1,5 @@
 import type { FindOptionsWhere } from 'typeorm';
-import { BaseCRUDLService } from "@aequum/crudl";
+import { BaseCRUDLService }from '@aequum/crudl';
 
 import { TypeORMRepository } from '../repository';
 import { duplicateEntryExceptionOrError } from '../utils/typeorm.utils';

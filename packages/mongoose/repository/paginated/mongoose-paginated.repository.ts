@@ -1,9 +1,9 @@
 import * as mongoose from 'mongoose';
 import 'mongoose-paginate-v2';
-import { PaginateSortBy } from "@aequum/paginate-common";
+import { PaginateSortBy }from '@aequum/paginate-common';
 
-import { MongooseRepository } from "../../repository";
-import { paginate } from "../../utils/paginate.util";
+import { MongooseRepository }from '../../repository';
+import { paginate }from '../../utils/paginate.util';
 
 
 export class MongoosePaginatedRepository<SchemaModel>
