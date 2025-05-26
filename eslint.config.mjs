@@ -1,10 +1,10 @@
-// @ts-check
 // noinspection NpmUsedModulesInstalled,JSCheckFunctionSignatures,SpellCheckingInspection
 
 import eslint from '@eslint/js';
+import { globalIgnores } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 // import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import importPlugin from 'eslint-plugin-import';
+import * as importPlugin from 'eslint-plugin-import';
 import globals from 'globals';
 
 
@@ -13,21 +13,21 @@ export default tseslint.config(
         settings: {
             "import/resolver": { "typescript": { "alwaysTryTypes": true } }
         },
-        ignores: [
-            'node_modules',
-            '**/node_modules/**',
-            '**/*.js',
-            '**/*.d.ts',
-            'dist/*',
-            'coverage/**',
-            '**/logs/**',
-            'prod/**',
-            '.husky/**',
-            '.git/**',
-            'eslint.config.mjs',
-            'gulpfile.js',
-        ],
     },
+    globalIgnores([
+        'node_modules',
+        '**/node_modules/**',
+        '**/*.js',
+        '**/*.d.ts',
+        'dist/*',
+        'coverage/**',
+        '**/logs/**',
+        'prod/**',
+        '.husky/**',
+        '.git/**',
+        'eslint.config.mjs',
+        'gulpfile.js',
+    ]),
     eslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
     importPlugin.flatConfigs.recommended,
@@ -48,6 +48,7 @@ export default tseslint.config(
     },
     {
         rules: {
+            'no-trailing-spaces': 'error',
             'no-case-declarations': 'off',
             '@typescript-eslint/no-explicit-any': 'off',
             '@typescript-eslint/no-unsafe-assignment': 'off',
