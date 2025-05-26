@@ -11,6 +11,9 @@ packages/**/README.md
 packages/**/.npmignore
 packages/**/LICENSE
 
+# Docs
+docs/html/*
+
 # Logs
 logs
 *.log

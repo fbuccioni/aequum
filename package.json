@@ -1,8 +1,8 @@
 {
-  "name": "@aequum/utils",
-  "title": "aequum apps utils",
-  "version": "0.24.0",
-  "description": "Util functions for different usages",
+  "name": "aequum",
+  "title": "The aequum framework",
+  "version": "0.25.0",
+  "description": "A framrework to build apps common components fast, easy and fair",
   "author": {
     "name": "Felipe Buccioni",
     "email": "felipe.buccioni@gmail.com"
@@ -20,6 +20,8 @@
     "build:prod": "tsc -b -v packages",
     "changelog": "lerna-changelog",
     "clean": "gulp clean:bundle; tsc -b --clean packages",
+    "docs:html": "typedoc",
+    "docs:html:watch": "nodemon --exec 'npm run docs:html' -w 'packages/**/*' -w 'typedoc.json' -i '*.d.ts' -e 'ts,json'",
     "lint": "concurrently 'npm run lint:packages'",
     "lint:fix": "concurrently 'npm run lint:packages -- --fix' 'npm run lint:integration -- --fix' 'npm run lint:spec -- --fix'",
     "lint:packages": "NODE_OPTIONS='--max-old-space-size=4096' npx eslint 'packages/**/**.ts' --ignore-pattern 'packages/**/*.spec.ts'",
@@ -52,9 +54,11 @@
     "lerna": "2.11.0",
     "lerna-changelog": "2.2.0",
     "lint-staged": "^16.0.0",
+    "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typedoc": "^0.28.4",
+    "typedoc-material-theme": "^1.4.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.29.0"
   },
@@ -70,8 +74,6 @@
     "tslib": "^2.8.1"
   },
   "lint-staged": {
-    "**/*.ts": [
-      "eslint"
-    ]
+    "**/*.ts": [ "eslint" ]
   }
 }

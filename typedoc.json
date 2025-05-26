@@ -1,0 +1,34 @@
+{
+    "plugin": ["typedoc-material-theme"],
+    "themeColor": "#805320",
+    "entryPoints": [    
+            "packages/crudl",
+            "packages/exceptions",
+            "packages/geojson-models",
+            "packages/mongoose",
+            "packages/paginate-common",
+            "packages/typeorm",
+            "packages/types",
+            "packages/utils",
+            "packages/validators",
+    ],
+    "name": "Aequum",
+    "cleanOutputDir": true,
+    "out": "docs/html",
+    "entryPointStrategy": "packages",
+    "packageOptions": {
+            "entryPoints": [ 
+                "index.ts",
+                "auth/index.ts",
+                "interfaces/index.ts",
+                "validation/index.ts",
+                "repositories/index.ts",
+                "repositories/paginated/index.ts",
+                "services/index.ts",
+                "services/paginated/index.ts",
+                "utils/index.ts",
+            ],
+            "tsconfig": [ "tsconfig.build.json"],
+    },
+    "tsconfig": "packages/tsconfig.build.json"
+}
