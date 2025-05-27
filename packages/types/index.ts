@@ -1,2 +1,2 @@
-import * as json from './JSON.type';
-import { ClassConstructor } from './class-constructor.type';
+export * as json from './JSON.type';
+export { ClassConstructor } from './class-constructor.type';
