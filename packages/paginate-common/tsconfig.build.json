@@ -1,0 +1,26 @@
+{
+    "extends": "../tsconfig.build.json",
+    "compilerOptions": {
+        "outDir": ".",
+        "rootDir": ".",
+        "paths": {
+            "@aequum/crudl": [ "../crudl" ],
+            "@aequum/exceptions": [ "../exceptions" ],
+            "@aequum/exceptions/*": [ "../exceptions/*" ],
+            "@aequum/geojson-models": [ "../geojson-models" ],
+            "@aequum/mongoose/*": [ "../mongoose/*" ],
+            "@aequum/paginate-common": [ "../paginate-common" ],
+            "@aequum/typeorm/*": [ "../typeorm/*" ],
+            "@aequum/types": [ "../types" ],
+            "@aequum/utils": [ "../utils" ],
+            "@aequum/validators": [ "../validators" ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test/**/*",
+        "*.spec.ts"
+    ],
+    "references": []
+}

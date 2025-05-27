@@ -1,5 +1,6 @@
-import { BaseCRUDLService } from "../../crudl/services/base-crudl.service";
-import { PaginateSortBy } from "../../paginate-common/types/paginate-sort-by.type";
+import { PaginateSortBy } from "@aequum/paginate-common";
+
+import { BaseCRUDLService } from "./base-crudl.service";
 
 
 export abstract class BaseCRUDLPaginatedService extends BaseCRUDLService {

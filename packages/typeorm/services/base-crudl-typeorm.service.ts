@@ -1,15 +1,15 @@
-import { FindOptionsWhere } from 'typeorm';
+import type { FindOptionsWhere } from 'typeorm';
+import { BaseCRUDLService } from "@aequum/crudl";
 
-import { TypeORMRepository } from '../../repository/type-orm.repository';
-import { duplicateEntryExceptionOrError } from '../../utils/typeorm.utils';
-import { BaseCRUDLService } from "./base-crudl.service";
+import { TypeORMRepository } from '../repository';
+import { duplicateEntryExceptionOrError } from '../utils/typeorm.utils';
 
 
 export abstract class BaseCRUDLTypeORMService<
-    EntityModel extends { [key in PrimaryKeyField]: any },
+    EntityModel extends { [ key in PrimaryKeyField ]: any },
     EntityModelDto,
     EntityModelCreateDto,
-    EntityModelUpdateDto,
+    EntityModelUpdateDto,            
     QueryFilter = any,
     PrimaryKeyField extends string = 'id'
 > extends BaseCRUDLService implements BaseCRUDLService {

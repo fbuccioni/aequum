@@ -1,12 +1,12 @@
 {
-    "name": "@fbuccioni/mongoose",
-    "version": "10.0.0-alpha01",
-    "description": "fbuccioni's mongoose tools for repository, pagination, crudl, configs and utils ",
+    "name": "@aequum/mongoose",
+    "version": "0.25.0-alpha03",
+    "description": "aequum mongoose tools for repository, pagination, CRUD/CRUDL, configs and utils ",
     "author": "Felipe Buccioni",
-    "homepage": "https://github.com/fbuccioni/nodejs-packages",
+    "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fbuccioni/nodejs-packages.git",
+        "url": "https://github.com/fbuccioni/aequum.git",
         "directory": "packages/mongoose"
     },
     "license": "Apache-2.0",
@@ -14,9 +14,9 @@
         "access": "public"
     },
     "dependencies": {
-        "@fbuccioni/crudl": "^10.0.0-alpha01",
-        "@fbuccioni/exceptions": "^10.0.0-alpha01",
-        "@fbuccioni/paginate-common": "^10.0.0-alpha01",
+        "@aequum/crudl": "^0.25.0-alpha03",
+        "@aequum/exceptions": "^0.25.0-alpha03",
+        "@aequum/paginate-common": "^0.25.0-alpha03",
         "mongoose": ">=8.8.0",
         "mongoose-paginate-v2": ">=1.8.0"
     }

@@ -1,6 +1,6 @@
 import { IsEnum, IsObject, IsOptional, ValidateNested } from 'class-validator';
+import { IsNumberOrString } from '@aequum/validators';
 
-import { IsNumberOrString } from '../validators/is-number-or-string.validator';
 import {
     GeometryCollection,
     LineString,

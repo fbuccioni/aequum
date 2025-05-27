@@ -1,0 +1,1 @@
+export * from './services/base-crudl.service';
