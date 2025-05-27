@@ -1,0 +1,16 @@
+{
+    "name": "@fbuccioni/paginate-common",
+    "version": "10.0.0-alpha01",
+    "description": "Paginate common components",
+    "author": "Felipe Buccioni",
+    "homepage": "https://github.com/fbuccioni/nodejs-packages",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fbuccioni/nodejs-packages.git",
+        "directory": "packages/paginate-common"
+    },
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    }
+}
