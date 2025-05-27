@@ -1,0 +1,1 @@
+export * from './base-crudl-mongoose-paginated.service';

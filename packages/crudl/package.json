@@ -1,12 +1,12 @@
 {
-    "name": "@fbuccioni/crudl",
-    "version": "10.0.0-alpha01",
-    "description": "fbuccioni's CRUDL operations common components",
+    "name": "@aequum/crudl",
+    "version": "0.25.0-alpha03",
+    "description": "aequum CRUD/CRUDL operations common components",
     "author": "Felipe Buccioni",
-    "homepage": "https://github.com/fbuccioni/nodejs-packages",
+    "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fbuccioni/nodejs-packages.git",
+        "url": "https://github.com/fbuccioni/aequum.git",
         "directory": "packages/crudl"
     },
     "license": "Apache-2.0",
@@ -14,6 +14,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@fbuccioni/paginate-common": "^10.0.0-alpha01"
+        "@aequum/paginate-common": "^0.25.0-alpha03"
     }
 }

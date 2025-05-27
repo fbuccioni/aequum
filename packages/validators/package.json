@@ -1,12 +1,12 @@
 {
-    "name": "@fbuccioni/validators",
-    "version": "10.0.0-alpha01",
-    "description": "Custom validators for `class-validator`",
+    "name": "@aequum/validators",
+    "version": "0.25.0-alpha03",
+    "description": "aequum custom validators for `class-validator`",
     "author": "Felipe Buccioni",
-    "homepage": "https://github.com/fbuccioni/nodejs-packages",
+    "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fbuccioni/nodejs-packages.git",
+        "url": "https://github.com/fbuccioni/aequum.git",
         "directory": "packages/validators"
     },
     "publishConfig": {

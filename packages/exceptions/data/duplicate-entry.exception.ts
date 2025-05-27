@@ -1,7 +1,8 @@
+import { data as dataUtil } from '@aequum/utils';
+
 import { BaseException } from '../base.exception';
 import { ValidationException } from '../validation/validation.exception';
 import { ValidationableException } from '../interfaces/validationable-exception.interface';
-import * as dataUtil from '../../utils/data.util';
 
 
 export class DuplicateEntryException extends BaseException implements ValidationableException {

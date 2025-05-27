@@ -1,0 +1,19 @@
+{
+    "extends": "../tsconfig.build.json",
+    "compilerOptions": {
+        "outDir": ".",
+        "rootDir": ".",
+        "paths": {
+            "@aequum/utils": [ "../utils" ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test/**/*",
+        "*.spec.ts"
+    ],
+    "references": [
+        { "path": "../utils/tsconfig.build.json" }
+    ]
+}

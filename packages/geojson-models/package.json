@@ -1,12 +1,12 @@
 {
-    "name": "@fbuccioni/geojson-models",
-    "version": "10.0.0-alpha01",
-    "description": "GeoJSON models with `class-validator`",
+    "name": "@aequum/geojson-models",
+    "version": "0.25.0-alpha03",
+    "description": "GeoJSON models for `class-validator` provided by aequum",
     "author": "Felipe Buccioni",
-    "homepage": "https://github.com/fbuccioni/nodejs-packages",
+    "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fbuccioni/nodejs-packages.git",
+        "url": "https://github.com/fbuccioni/aequum.git",
         "directory": "packages/exceptions"
     },
     "license": "Apache-2.0",

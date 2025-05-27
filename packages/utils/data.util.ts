@@ -30,7 +30,7 @@ export function objectFromDotNotation(
     if (!obj) obj = {};
 
     const parts = dotNotation.split('.');
-    const last = parts.pop();
+    const last = parts.pop() as string;
 
     parts.reduce((acc, part) => acc[part] = acc[part] || {}, obj)[last] = value;
 

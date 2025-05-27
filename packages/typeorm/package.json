@@ -1,12 +1,12 @@
 {
-    "name": "@fbuccioni/typeorm",
-    "version": "10.0.0-alpha01",
-    "description": "fbuccioni's TypeORM tools for repository, pagination, crudl, configs and utils ",
+    "name": "@aequum/typeorm",
+    "version": "0.25.0-alpha03",
+    "description": "aequum TypeORM tools for repository, pagination, CRUD/CRUDL, configs and utils ",
     "author": "Felipe Buccioni",
-    "homepage": "https://github.com/fbuccioni/nodejs-packages",
+    "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fbuccioni/nodejs-packages.git",
+        "url": "https://github.com/fbuccioni/aequum.git",
         "directory": "packages/typeorm"
     },
     "license": "Apache-2.0",
@@ -14,9 +14,9 @@
         "access": "public"
     },
     "dependencies": {
-        "@fbuccioni/crudl": "^10.0.0-alpha01",
-        "@fbuccioni/exceptions": "^10.0.0-alpha01",
-        "@fbuccioni/paginate-common": "^10.0.0-alpha01",
+        "@aequum/crudl": "^0.25.0-alpha03",
+        "@aequum/exceptions": "^0.25.0-alpha03",
+        "@aequum/paginate-common": "^0.25.0-alpha03",
         "typeorm": ">=0.3.0 || <1.0.0"
     }
 }

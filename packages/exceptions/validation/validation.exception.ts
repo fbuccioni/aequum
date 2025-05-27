@@ -1,4 +1,5 @@
-import * as dataUtil from '../../utils/data.util';
+import { data as dataUtil } from '@aequum/utils';
+
 import { BaseException } from '../base.exception';
 
 

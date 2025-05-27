@@ -1,0 +1,19 @@
+{
+    "extends": "../tsconfig.build.json",
+    "compilerOptions": {
+        "outDir": ".",
+        "rootDir": ".",
+        "paths": {
+            "@aequum/paginate-common": [ "../paginate-common" ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test/**/*",
+        "*.spec.ts"
+    ],
+    "references": [
+        { "path": "../paginate-common/tsconfig.build.json" },
+    ]
+}

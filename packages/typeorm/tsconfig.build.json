@@ -1,0 +1,26 @@
+{
+    "extends": "../tsconfig.build.json",
+    "compilerOptions": {
+        "outDir": ".",
+        "rootDir": ".",
+        "paths": {
+            "@aequum/crudl": [ "../crudl" ],
+            "@aequum/exceptions": [ "../exceptions" ],
+            "@aequum/exceptions/*": [ "../exceptions/*" ],
+            "@aequum/paginate-common": [ "../paginate-common" ],
+            "@aequum/utils": [ "../utils" ],
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test/**/*",
+        "*.spec.ts"
+    ],
+    "references": [
+        { "path": "../crudl/tsconfig.build.json" },
+        { "path": "../exceptions/tsconfig.build.json" },
+        { "path": "../paginate-common/tsconfig.build.json" },
+        { "path": "../utils/tsconfig.build.json" },
+    ]
+}
