@@ -11,4 +11,3 @@ export class Point {
     @IsCoordinate()
     coordinates: Coordinate;
 }
-

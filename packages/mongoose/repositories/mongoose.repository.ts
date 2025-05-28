@@ -7,6 +7,10 @@ type AnyObject = { [ key: string ]: any };
 export class MongooseRepository<SchemaModel> {
     protected model: MongooseModel<SchemaModel>;
 
+    /**
+     * The mongoose schema model
+     * @protected
+     */
     get schema() {
         return this.model.schema;
     }

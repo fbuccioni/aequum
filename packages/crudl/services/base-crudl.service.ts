@@ -1,3 +1,9 @@
+
+/**
+ * Base CRUD/CRUDL service to use as a base for
+ * services that implement CRUDL operations
+ * (Create, Retrieve, Update, Delete, List)
+ */
 export abstract class BaseCRUDLService {
     /**
      * The primary key field

@@ -1,6 +1,11 @@
 import { buildMessage, ValidateBy, ValidationOptions } from 'class-validator';
 
-
+/**
+ * Validate whether the value type is a number or a string
+ *
+ * @param validationOptions
+ * @returns
+ */
 export function IsNumberOrString(
     validationOptions?: ValidationOptions
 ): PropertyDecorator {

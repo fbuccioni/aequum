@@ -1,15 +1,22 @@
 import type { FindOptionsWhere } from 'typeorm';
 import { BaseCRUDLService }from '@aequum/crudl';
 
-import { TypeORMRepository } from '../repository';
+import { TypeORMRepository } from '../repositories';
 import { duplicateEntryExceptionOrError } from '../utils/typeorm.utils';
 
-
+/**
+ * Base CRUD/CRUDL TypeORM Service for a TypeORM Entity Model.
+ *
+ * **NOTE**: If you want to present different primary key
+ * field you must pass the `PrimaryKeyField` type parameter.
+ * and set the `primaryKeyField` property to the name of
+ * the field.
+ */
 export abstract class BaseCRUDLTypeORMService<
     EntityModel extends { [ key in PrimaryKeyField ]: any },
     EntityModelDto,
     EntityModelCreateDto,
-    EntityModelUpdateDto,            
+    EntityModelUpdateDto,
     QueryFilter = any,
     PrimaryKeyField extends string = 'id'
 > extends BaseCRUDLService implements BaseCRUDLService {

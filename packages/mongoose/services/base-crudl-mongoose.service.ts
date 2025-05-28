@@ -1,7 +1,7 @@
-import { RootFilterQuery }from 'mongoose';
-import { BaseCRUDLService }from '@aequum/crudl';
+import { RootFilterQuery } from 'mongoose';
+import { BaseCRUDLService } from '@aequum/crudl';
 
-import { MongooseRepository }from '../repository';
+import { MongooseRepository } from '../repositories';
 import { duplicateEntryExceptionOrError } from '../utils/mongoose.util';
 
 

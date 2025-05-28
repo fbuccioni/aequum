@@ -1,8 +1,32 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { DataSourceOptions, TypeORMError } from 'typeorm';
 import { DuplicateEntryException } from '@aequum/exceptions/data';
+import { data } from '@aequum/utils';
 
 
+/**
+ * SchemedDataSources are the data sources that support schemas
+ * and will be parsed as `database/schema` in `URIToDataSourceOptions`
+ * if there are a custom DataSource driver and schema need to be parsed
+ * in the URI, add the DataSource name to this array.
+ *
+ * @see {@link URIToDataSourceOptions}
+ */
+export const SchemedDataSources = [ 'postgres', 'mssql', 'cockroachdb' ];
+
+/**
+ * Translate a database URI to TypeORM DataSourceOptions, protocol must be
+ * the TypeORM DataSource type (e.g. 'mysql', 'postgres', 'sqlite', etc.),
+ * the host, port, username, password, database and schema (If applies)
+ * will be extracted from the URI and all the query string parameters will
+ * be added to the options.
+ *
+ * @see [TypeORM Docs: DataSource API](https://orkhan.gitbook.io/typeorm/docs/data-source-api)
+ * @see [TypeORM Docs: Data source options](https://orkhan.gitbook.io/typeorm/docs/data-source-options)
+ * @see {@link SchemedDataSources}
+ * @param uri DataSource URI
+ * @returns TypeORM DataSourceOptions
+ */
 export function URIToDataSourceOptions(uri: string):  DataSourceOptions {
     let parsedURI: URL;
 
@@ -19,15 +43,20 @@ export function URIToDataSourceOptions(uri: string):  DataSourceOptions {
         throw err;
     }
 
-    const [ database, schema ] = parsedURI.pathname.split('/').slice(1);
+    const dataSourceType = parsedURI.protocol.substring(0, parsedURI.protocol.length - 1);
+    const [ database, schema ] = (
+        (SchemedDataSources.includes(dataSourceType))
+            ? parsedURI.pathname.split('/').slice(1)
+            : [ parsedURI.pathname.slice(1), undefined ]
+    )
 
     const additionalConfig = {};
+
     if (parsedURI.search)
         Object.assign(additionalConfig, Object.fromEntries(new URLSearchParams(parsedURI.search)));
 
     return {
-        // @ts-ignore
-        type: parsedURI.protocol.substring(0, parsedURI.protocol.length - 1),
+        type: dataSourceType as any,
         host: parsedURI.hostname,
         username: parsedURI.username,
         password: parsedURI.password,
@@ -38,6 +67,9 @@ export function URIToDataSourceOptions(uri: string):  DataSourceOptions {
     };
 }
 
+/**
+ * Check if the error is a TypeORMError and if it is a duplicate error
+*/
 export function isDuplicateError(err: any) {
     return (
         err instanceof TypeORMError
@@ -45,6 +77,11 @@ export function isDuplicateError(err: any) {
     )
 }
 
+/**
+ * Check if the error is a duplicate entry error, if it is,
+ * returns a `new DuplicateEntryException` with passed
+ * arguments, otherwise returns the orignal error.
+ */
 export function duplicateEntryExceptionOrError<T extends Error>(
     err: T, message?: any,
     data?: any, duplicatedProperties?: string[]

@@ -2,12 +2,12 @@ import * as mongoose from 'mongoose';
 import 'mongoose-paginate-v2';
 import { PaginateSortBy, sortStringToPaginateSortBy } from '@aequum/paginate-common';
 
-import { MongoosePaginatedRepository } from '../../repository/paginated';
+import { MongoosePaginatedRepository } from '../../repositories/paginated';
 import { BaseCRUDLMongooseService } from '..';
 
 
 /**
- * Base CRUDL Mongoose Service for a Mongoose Schema Model, with
+ * Base CRUD/CRUDL Mongoose Service for a Mongoose Schema Model, with
  * paginated list output, by default assumes that the primary key
  * field as `id` provided by Virtual ID
  *
