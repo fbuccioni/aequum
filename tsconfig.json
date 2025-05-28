@@ -16,6 +16,7 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "target": "es2022",
+        "useDefineForClassFields": false
     },
     "include": [
         "packages/**/*"
@@ -24,6 +25,6 @@
         "node_modules",
         "**/*.spec.ts",
         "gulpfile.js",
-        "eslint.config.mjs",
+        "eslint.config.mjs"
     ]
 }

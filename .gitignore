@@ -7,6 +7,9 @@ Thumbs.db
 # Bundle
 packages/**/*.d.ts
 packages/**/*.js
+packages/**/README.md
+packages/**/.npmignore
+packages/**/LICENSE
 
 # Logs
 logs

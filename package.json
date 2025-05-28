@@ -1,118 +1,83 @@
 {
-    "name": "nestjs-hexa",
-    "title": "NestJS hexagonal Boilerplate",
-    "version": "0.0.10",
-    "description": "Boilerplate for NestJS (TypeScript) to make an http service with hexagonal arch.",
-    "author": {
-        "name": "Felipe Buccioni",
-        "email": "felipe.buccioni@gmail.com"
-    },
-    "contributors": [
-        {
-            "name": "Moeid Heidari",
-            "url": "https://moeidheidari.com/"
-        }
-    ],
-    "private": true,
-    "license": "Apache",
-    "scripts": {
-        "prebuild": "rimraf dist",
-        "build": "nest build",
-        "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-        "start": "nest start",
-        "start:dev": "nest start --watch",
-        "start:debug": "nest start --debug --watch",
-        "start:prod": "node dist/main",
-        "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-        "test": "jest",
-        "test:ci": "jest --ci --detectOpenHandles --forceExit",
-        "test:watch": "jest --watch",
-        "test:cov": "jest --coverage",
-        "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-        "test:e2e": "jest --config ./test/jest-e2e.json"
-    },
-    "dependencies": {
-        "@fastify/cors": "^11.0.1",
-        "@fastify/static": "^7.0.0",
-        "@nestjs/axios": "^3.1.3",
-        "@nestjs/cache-manager": "^2.3.0",
-        "@nestjs/common": "^10.4.13",
-        "@nestjs/config": "^3.3.0",
-        "@nestjs/core": "^10.4.13",
-        "@nestjs/jwt": "^10.2.0",
-        "@nestjs/mapped-types": "^2.0.6",
-        "@nestjs/passport": "^10.0.3",
-        "@nestjs/platform-fastify": "^10.4.13",
-        "@nestjs/swagger": "^8.1.0",
-        "@nestjs/terminus": "^10.2.3",
-        "@willsoto/nestjs-prometheus": "^6.0.1",
-        "async-mutex": "^0.5.0",
-        "axios": "^1.7.9",
-        "bcrypt": "^5.1.1",
-        "cache-manager": "^5.7.6",
-        "class-transformer": "^0.5.1",
-        "class-validator": "^0.14.1",
-        "dotenv": "^16.4.7",
-        "dotenv-expand": "^12.0.1",
-        "dotenv-flow": "^4.1.0",
-        "fastify": "^5.2.0",
-        "passport": "^0.7.0",
-        "passport-jwt": "^4.0.1",
-        "prom-client": "^15.1.3",
-        "reflect-metadata": "^0.2.2",
-        "rimraf": "^6.0.1",
-        "rxjs": "^7.8.1"
-    },
-    "devDependencies": {
-        "@nestjs/cli": "^10.4.8",
-        "@nestjs/schematics": "^10.2.3",
-        "@nestjs/testing": "^10.4.13",
-        "@swc/cli": "^0.5.2",
-        "@swc/core": "^1.10.0",
-        "@swc/jest": "^0.2.37",
-        "@types/bcrypt": "^5.0.2",
-        "@types/dotenv-flow": "^3.3.3",
-        "@types/express": "^5.0.0",
-        "@types/jest": "^29.5.14",
-        "@types/morgan": "^1.9.9",
-        "@types/node": "^22.10.1",
-        "@types/supertest": "^6.0.2",
-        "eslint": "^9.16.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-import-resolver-typescript": "^3.8.3",
-        "eslint-plugin-import": "^2.31.0",
-        "eslint-plugin-prettier": "^5.2.1",
-        "globals": "^16.0.0",
-        "jest": "^29.7.0",
-        "morgan": "^1.10.0",
-        "prettier": "^3.4.2",
-        "source-map-support": "^0.5.21",
-        "supertest": "^7.0.0",
-        "swagger-ui-express": "^5.0.1",
-        "ts-jest": "^29.2.5",
-        "ts-loader": "^9.5.1",
-        "ts-node": "^10.9.2",
-        "tsconfig-paths": "^4.2.0",
-        "typescript": "^5.7.2",
-        "typescript-eslint": "^8.29.0"
-    },
-    "jest": {
-        "moduleFileExtensions": [
-            "js",
-            "json",
-            "ts"
-        ],
-        "rootDir": "src",
-        "testRegex": ".*\\.spec\\.ts$",
-        "transform": {
-            "^.+\\.(t|j)s$": [
-                "@swc/jest"
-            ]
-        },
-        "collectCoverageFrom": [
-            "**/*.(t|j)s"
-        ],
-        "coverageDirectory": "../coverage",
-        "testEnvironment": "node"
+  "name": "nestjs-hexa",
+  "title": "NestJS hexagonal Boilerplate",
+  "version": "0.0.10",
+  "description": "Boilerplate for NestJS (TypeScript) to make an http service with hexagonal arch.",
+  "author": {
+    "name": "Felipe Buccioni",
+    "email": "felipe.buccioni@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Moeid Heidari",
+      "url": "https://moeidheidari.com/"
     }
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fbuccioni/aequum.git"
+  },
+  "scripts": {
+    "build": "tsc -b -v packages",
+    "postbuild": "npm run move:node_modules",
+    "build:dev": "tsc -b -v packages --watch",
+    "prebuild:prod": "npm run clean",
+    "build:prod": "tsc -b -v packages",
+    "changelog": "lerna-changelog",
+    "clean": "gulp clean:bundle; tsc -b --clean packages",
+    "lint": "concurrently 'npm run lint:packages'",
+    "lint:fix": "concurrently 'npm run lint:packages -- --fix' 'npm run lint:integration -- --fix' 'npm run lint:spec -- --fix'",
+    "lint:packages": "NODE_OPTIONS='--max-old-space-size=4096' npx eslint 'packages/**/**.ts' --ignore-pattern 'packages/**/*.spec.ts'",
+    "lint:ci": "concurrently 'npm run lint:packages' 'npm run lint:spec'",
+    "prerelease": "gulp copy-misc",
+    "publish": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --force-publish --access public --exact -m \"chore(@aequum) publish %s release\"",
+    "prepublishOnly": "npm run changelog | pbcopy",
+    "publish:beta": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=beta --git-remote gh --access public -m \"chore(@aequum) publish %s release\"",
+    "publish:next": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=next --git-remote gh  --access public --skip-git -m \"chore(@aequum) publish %s release\"",
+    "publish:rc": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=rc --git-remote gh  --access public -m \"chore(@aequum) publish %s release\"",
+    "publish:test": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --force-publish --git-remote gh  --access public --npm-tag=test --skip-git -m \"chore(@aequum) publish %s release\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/gulp": "^4.0.17",
+    "@types/node": "^22.15.14",
+    "concurrently": "^9.1.2",
+    "del": "^8.0.0",
+    "delete-empty": "^3.0.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.8.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^16.0.0",
+    "gulp": "^5.0.0",
+    "gulp-typescript": "5.0.1",
+    "husky": "^9.1.7",
+    "lerna": "2.11.0",
+    "lerna-changelog": "2.2.0",
+    "lint-staged": "^16.0.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typedoc": "^0.28.4",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.29.0"
+  },
+  "peerDependencies": {
+    "class-validator": "*",
+    "dotenv": "*",
+    "dotenv-expand": "*",
+    "mongoose": ">=8.8.0",
+    "mongoose-paginate-v2": ">=1.8.0",
+    "typeorm": ">=0.3.0 || <1.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint"
+    ]
+  }
 }
