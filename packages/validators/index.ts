@@ -1,1 +1,1 @@
-export * from './is-number-or-string.validator';
+export * from './data/is-number-or-string.validator';

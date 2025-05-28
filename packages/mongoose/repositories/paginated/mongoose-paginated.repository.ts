@@ -2,7 +2,7 @@ import * as mongoose from 'mongoose';
 import 'mongoose-paginate-v2';
 import { PaginateSortBy }from '@aequum/paginate-common';
 
-import { MongooseRepository }from '../../repository';
+import { MongooseRepository }from '..';
 import { paginate }from '../../utils/paginate.util';
 
 

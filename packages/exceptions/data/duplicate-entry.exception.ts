@@ -1,6 +1,6 @@
 import { data as dataUtil } from '@aequum/utils';
 
-import { BaseException } from '../base.exception';
+import { BaseException } from '../base/base.exception';
 import { ValidationException } from '../validation/validation.exception';
 import { ValidationableException } from '../interfaces/validationable-exception.interface';
 
@@ -33,7 +33,7 @@ export class DuplicateEntryException extends BaseException implements Validation
             errors = this.uniqueProperties.reduce(
                 (acc, prop) => ({
                     ...acc,
-                    ...dataUtil.objectFromDotNotation(prop, acc, [[ this.code, this.message ]]),
+                    ...dataUtil.updateObjectByDotNotation(prop, acc, [[ this.code, this.message ]]),
                 }), {}
             );
         else

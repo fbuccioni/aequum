@@ -1,4 +1,4 @@
-import { BaseException } from '../base.exception';
+import { BaseException } from '../base/base.exception';
 
 
 export class NotFoundException extends BaseException {

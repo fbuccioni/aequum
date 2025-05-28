@@ -19,15 +19,15 @@ export function hidePasswords(data: any) {
  * Set a value in an object using dot notation
  *
  * @param dotNotation - Dot notation path
- * @param obj - Object to set the value if a "false" value is passed
- * it will create the object
+ * @param obj - Object to set the value, when
+ * `null` or `undefined`it creates a new object
  * @param value - Value to set
  * @returns - Object with the value set
  */
-export function objectFromDotNotation(
+export function updateObjectByDotNotation(
     dotNotation: string, obj?: any, value?: any
 ) {
-    if (!obj) obj = {};
+    if (obj === null || obj === undefined) obj = {};
 
     const parts = dotNotation.split('.');
     const last = parts.pop() as string;
