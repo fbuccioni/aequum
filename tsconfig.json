@@ -16,7 +16,19 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "target": "es2022",
-        "useDefineForClassFields": false
+        "useDefineForClassFields": false,
+        "paths": {
+            "@aequum/crudl": [ "./packages/crudl" ],
+            "@aequum/exceptions": [ "./packages/exceptions" ],
+            "@aequum/exceptions/*": [ "./packages/exceptions/*" ],
+            "@aequum/geojson-models": [ "./packages/geojson-models" ],
+            "@aequum/mongoose/*": [ "./packages/mongoose/*" ],
+            "@aequum/paginate-common": [ "./packages/paginate-common" ],
+            "@aequum/typeorm/*": [ "./packages/typeorm/*" ],
+            "@aequum/types": [ "./packages/types" ],
+            "@aequum/utils": [ "./packages/utils" ],
+            "@aequum/validators": [ "./packages/validators" ]
+        }
     },
     "include": [
         "packages/**/*"

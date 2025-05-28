@@ -1,18 +1,12 @@
 {
-  "name": "nestjs-hexa",
-  "title": "NestJS hexagonal Boilerplate",
-  "version": "0.0.10",
-  "description": "Boilerplate for NestJS (TypeScript) to make an http service with hexagonal arch.",
+  "name": "@aequum/utils",
+  "title": "aequum apps utils",
+  "version": "0.24.0",
+  "description": "Util functions for different usages",
   "author": {
     "name": "Felipe Buccioni",
     "email": "felipe.buccioni@gmail.com"
   },
-  "contributors": [
-    {
-      "name": "Moeid Heidari",
-      "url": "https://moeidheidari.com/"
-    }
-  ],
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
