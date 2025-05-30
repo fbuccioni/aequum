@@ -1,6 +1,6 @@
 {
     "name": "@aequum/mongoose",
-    "version": "0.25.0-alpha07",
+    "version": "0.25.1-alpha08",
     "description": "aequum mongoose tools for repository, pagination, CRUD/CRUDL, configs and utils ",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
@@ -14,9 +14,9 @@
         "access": "public"
     },
     "dependencies": {
-        "@aequum/crudl": "^0.25.0-alpha07",
-        "@aequum/exceptions": "^0.25.0-alpha07",
-        "@aequum/paginate-common": "^0.25.0-alpha07",
+        "@aequum/crudl": "^0.25.1-alpha08",
+        "@aequum/exceptions": "^0.25.1-alpha08",
+        "@aequum/paginate-common": "^0.25.1-alpha08",
         "mongoose": ">=8.8.0",
         "mongoose-paginate-v2": ">=1.8.0"
     }
