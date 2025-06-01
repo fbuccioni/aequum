@@ -14,10 +14,10 @@
         "access": "public"
     },
     "dependencies": {
-        "@aequum/crudl": "^0.25.0-alpha07",
-        "@aequum/exceptions": "^0.25.0-alpha07",
-        "@aequum/paginate-common": "^0.25.0-alpha07",
-        "mongoose": ">=8.8.0",
-        "mongoose-paginate-v2": ">=1.8.0"
+        "@aequum/crudl": "^0.25.1-alpha08",
+        "@aequum/exceptions": "^0.25.1-alpha08",
+        "@aequum/paginate-common": "^0.25.1-alpha08",
+        "mongoose": ">=8.0.0",
+        "mongoose-paginate-v2": ">=1.0.0"
     }
 }
