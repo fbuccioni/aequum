@@ -1,6 +1,6 @@
 {
     "name": "@aequum/exceptions",
-    "version": "0.25.0-alpha07",
+    "version": "0.25.2-alpha",
     "description": "aequum common exceptions collection",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
@@ -14,6 +14,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@aequum/utils": "^0.25.0-alpha07"
+        "@aequum/utils": "^0.25.2-alpha"
     }
 }
