@@ -1,6 +1,6 @@
 {
     "name": "@aequum/crudl",
-    "version": "0.25.5-alpha",
+    "version": "0.25.6-alpha",
     "description": "aequum CRUD/CRUDL operations common components",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
@@ -14,6 +14,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@aequum/paginate-common": "^0.25.5-alpha"
+        "@aequum/paginate-common": "^0.25.6-alpha"
     }
 }
