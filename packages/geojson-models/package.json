@@ -1,6 +1,6 @@
 {
     "name": "@aequum/geojson-models",
-    "version": "0.25.0-alpha07",
+    "version": "0.25.5-alpha",
     "description": "GeoJSON models for `class-validator` provided by aequum",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
