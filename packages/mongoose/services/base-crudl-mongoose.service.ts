@@ -74,7 +74,9 @@ export abstract class BaseCRUDLMongooseService<
      * @returns MongoDB filter
      */
     queryFilterToMongoDBFilter(filter: CustomFilterType): RootFilterQuery<SchemaModel> {
-        const mongoFilter = Object.assign({}, filter);
+        const mongoFilter = Object.assign(
+            {}, filter, this.getDefaultMongoDBFilter()
+        );
         this.virtualIDFilterTransform(mongoFilter);
         return mongoFilter as unknown as RootFilterQuery<SchemaModel>;
     }
