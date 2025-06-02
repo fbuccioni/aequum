@@ -1,6 +1,6 @@
 {
     "name": "@aequum/mongoose",
-    "version": "0.25.0-alpha07",
+    "version": "0.25.4-alpha",
     "description": "aequum mongoose tools for repository, pagination, CRUD/CRUDL, configs and utils ",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
