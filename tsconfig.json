@@ -18,6 +18,8 @@
         "target": "es2022",
         "useDefineForClassFields": false,
         "paths": {
+            "@aequum/common": [ "./packages/common" ],
+            "@aequum/common/*": [ "./packages/common/*" ],
             "@aequum/crudl": [ "./packages/crudl" ],
             "@aequum/exceptions": [ "./packages/exceptions" ],
             "@aequum/exceptions/*": [ "./packages/exceptions/*" ],

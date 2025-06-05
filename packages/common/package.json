@@ -1,0 +1,20 @@
+{
+    "name": "@aequum/common",
+    "version": "0.26.1",
+    "description": "aequum common components collection",
+    "author": "Felipe Buccioni",
+    "homepage": "https://github.com/fbuccioni/aequum",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fbuccioni/aequum.git",
+        "directory": "packages/common"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@aequum/exceptions": "0.26.1",
+        "@aequum/utils": "0.26.1"
+    }
+}

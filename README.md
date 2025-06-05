@@ -13,6 +13,7 @@ This framework was designed having in mind hexagonal archivecture and clean code
 Packages
 --------
 
+- **[@aequum/common](packages/common/package.json)**: Common components
 - **[@aequum/crudl](packages/crudl/package.json)**: CRUD/CRUDL operations common components
 - **[@aequum/exceptions](packages/exceptions/package.json)**: Common exceptions collection
 - **[@aequum/geojson-models](packages/geojson-models/package.json)**: GeoJSON models with `class-validator`

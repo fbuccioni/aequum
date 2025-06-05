@@ -1,6 +1,7 @@
 {
     "files": [],
     "references": [
+        { "path": "./common/tsconfig.build.json" },
         { "path": "./crudl/tsconfig.build.json" },
         { "path": "./exceptions/tsconfig.build.json" },
         { "path": "./geojson-models/tsconfig.build.json" },
