@@ -1,6 +1,6 @@
 {
     "name": "@aequum/validators",
-    "version": "0.27.1",
+    "version": "0.27.3",
     "description": "aequum custom validators for `class-validator`",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
