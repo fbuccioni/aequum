@@ -1,20 +1,22 @@
 {
-    "name": "@aequum/common",
+    "name": "@aequum/in-memory",
     "version": "0.27.0",
-    "description": "aequum common components collection",
+    "description": "aequum in-memory stuff",
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {
         "type": "git",
         "url": "https://github.com/fbuccioni/aequum.git",
-        "directory": "packages/common"
+        "directory": "packages/memory"
     },
     "publishConfig": {
         "access": "public"
     },
     "license": "Apache-2.0",
     "dependencies": {
+        "@aequum/crudl": "0.27.0",
         "@aequum/exceptions": "0.27.0",
+        "@aequum/paginate-common": "0.27.0",
         "@aequum/utils": "0.27.0"
     }
 }
