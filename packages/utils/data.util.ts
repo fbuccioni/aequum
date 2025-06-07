@@ -66,3 +66,30 @@ export function mergeDeep(...objects: any[]): any {
         return prev;
     }, {});
 }
+
+/**
+ * Check if the given object is a class.
+ *
+ * @param obj - Object to check
+ */
+export function isClass(obj: object | Function): boolean {
+    return (
+        typeof obj === 'function'
+        && Object.getOwnPropertyDescriptor(obj, 'prototype')?.writable === false
+    )
+}
+
+const ObjectConstructor = {}.constructor;
+
+/**
+ * Check if the given object is an instance of a class.
+ *
+ * @param obj - Object to check
+ */
+export function isClassInstance(obj: object): boolean {
+    return (
+        typeof obj === 'object'
+        && obj.constructor !== ObjectConstructor
+    )
+}
+
