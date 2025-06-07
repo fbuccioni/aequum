@@ -5,20 +5,20 @@ import { BaseCRUDLInMemoryService } from './base-crudl-in-memory.service';
 
 
 export class BaseCRUDLInMemoryPaginatedService<
-    Model extends { [key: string]: any },
+    Model extends { [key in PrimaryKeyField]: any },
     ModelDto,
     ModelCreateDto,
     ModelUpdateDto,
     PaginatedModelDto,
     ModelFilterType = any,
-    PK extends string = 'id',
+    PrimaryKeyField extends string = 'id',
 > extends BaseCRUDLInMemoryService<
     Model,
     ModelDto,
     ModelCreateDto,
     ModelUpdateDto,
     ModelFilterType,
-    PK
+    PrimaryKeyField
 > implements BaseCRUDLPaginatedService {
 
     async paginatedList(
