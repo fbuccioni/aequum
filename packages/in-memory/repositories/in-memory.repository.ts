@@ -4,9 +4,6 @@ import { data as dataUtil } from '@aequum/utils'
 import { randomUUID } from 'node:crypto';
 
 
-
-type AnyObject = { [key: string]: any };
-
 /**
  * In memory (**volatile**) repository, implements basic
  * input/output operations.
@@ -20,7 +17,7 @@ type AnyObject = { [key: string]: any };
  * if this changes you must set the `primaryKeyField` property
  */
 export class InMemoryRepository<
-    Model extends AnyObject & { [ key in PrimeryKeyField ]: any },
+    Model extends { [ key in PrimeryKeyField ]: any },
     PrimeryKeyField extends string = 'id'
 > {
     protected data: Model[] = [];
@@ -41,7 +38,15 @@ export class InMemoryRepository<
      * @param filter Custom filter to match against the item
      */
     protected matchesFilter(item: Model, filter: Partial<Model>): boolean {
-        return Object.keys(filter).every(key => item[key] === filter[key]);
+        return Object.keys(filter).every((key) => {
+            if (Array.isArray(item[key])) {
+                if (!Array.isArray(filter[key]))
+                    return item[key].some(i => filter[key].includes(i));
+                return item[key].includes(filter[key]);
+            }
+
+            return item[key] === filter[key]
+        });
     }
 
     /**
@@ -132,7 +137,10 @@ export class InMemoryRepository<
         );
 
         if (!hasPrimaryKey)
-            data[this.primaryKeyField] = this.genPrimaryKey();
+            data = {
+                [this.primaryKeyField]: this.genPrimaryKey(),
+                ...data
+            };
 
         if (existingIndex !== -1)
             this.data[existingIndex] = data;
