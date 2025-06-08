@@ -12,10 +12,7 @@ export class BaseCRUDLInMemoryService<
     PrimaryKeyField extends string = 'id',
 > extends BaseCRUDLService {
     protected primaryKeyField: PrimaryKeyField = 'id' as PrimaryKeyField;
-
-    constructor(protected repository: InMemoryRepository<Model, PrimaryKeyField>) {
-        super();
-    }
+    protected repository: InMemoryRepository<Model, PrimaryKeyField>
 
     async create(data: ModelCreateDto): Promise<ModelDto> {
         return this.repository.put(data as any) as ModelDto;
