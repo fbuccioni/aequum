@@ -11,13 +11,13 @@ import { BaseCRUDLMongooseService } from '..';
  * paginated list output, by default assumes that the primary key
  * field as `id` provided by Virtual ID
  *
- * @paramType SchemaModel Mongoose Schema Model
- * @paramType SchemaModelDto DTO of the Mongoose Schema Model
- * @paramType SchemaModelCreateDto DTO to create a new Mongoose Schema Model
- * @paramType SchemaModelUpdateDto DTO to update a Mongoose Schema Model
- * @paramType PaginatedSchemaModelDto Paginated DTO of the Mongoose Schema Model
- * @paramType CustomFilterType Custom filter type to filter the query
- * @paramType PrimaryKeyField Primary key field of the Mongoose Schema
+ * @typeParam SchemaModel Mongoose Schema Model
+ * @typeParam SchemaModelDto DTO of the Mongoose Schema Model
+ * @typeParam SchemaModelCreateDto DTO to create a new Mongoose Schema Model
+ * @typeParam SchemaModelUpdateDto DTO to update a Mongoose Schema Model
+ * @typeParam PaginatedSchemaModelDto Paginated DTO of the Mongoose Schema Model
+ * @typeParam CustomFilterType Custom filter type to filter the query
+ * @typeParam PrimaryKeyField Primary key field of the Mongoose Schema
  * Model by default is `id` (Virtual ID)
  */
 export class BaseCRUDLMongoosePaginatedService<
@@ -63,7 +63,7 @@ export class BaseCRUDLMongoosePaginatedService<
         if (typeof sort === 'string')
             sort = sortStringToPaginateSortBy(sort);
 
-        return this.repository.findPaginated(
+        return this.repository.paginatedFind(
             this.queryFilterToMongoDBFilter(filter),
             page,
             size,

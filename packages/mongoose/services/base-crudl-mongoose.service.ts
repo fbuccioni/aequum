@@ -9,12 +9,12 @@ import { duplicateEntryExceptionOrError } from '../utils/exception.util';
  * Base CRUDL Mongoose Service for a Mongoose Schema Model, by default
  * assumes that the primary key field as `id` provided by Virtual ID
  *
- * @paramType SchemaModel Mongoose Schema Model
- * @paramType SchemaModelDto DTO of the Mongoose Schema Model
- * @paramType SchemaModelCreateDto DTO to create a new Mongoose Schema Model
- * @paramType SchemaModelUpdateDto DTO to update a Mongoose Schema Model
- * @paramType CustomFilterType Custom filter type to filter the query
- * @paramType PrimaryKeyField Primary key field of the Mongoose Schema
+ * @typeParam SchemaModel Mongoose Schema Model
+ * @typeParam SchemaModelDto DTO of the Mongoose Schema Model
+ * @typeParam SchemaModelCreateDto DTO to create a new Mongoose Schema Model
+ * @typeParam SchemaModelUpdateDto DTO to update a Mongoose Schema Model
+ * @typeParam CustomFilterType Custom filter type to filter the query
+ * @typeParam PrimaryKeyField Primary key field of the Mongoose Schema
  * Model by default is `id` (Virtual ID)
  */
 export abstract class BaseCRUDLMongooseService<
@@ -99,11 +99,7 @@ export abstract class BaseCRUDLMongooseService<
     /** Mongoose Repository to interact with the Mongoose Model */
     protected readonly repository: MongooseRepository<SchemaModel>
 
-    /**
-     * Create a new data entry
-     *
-     * @param data
-     */
+    /** @inheritdoc */
     async create(data: SchemaModelCreateDto): Promise<SchemaModelDto> {
         const self = this.constructor as typeof BaseCRUDLMongooseService;
 
@@ -118,32 +114,19 @@ export abstract class BaseCRUDLMongooseService<
         }
     }
 
-    /**
-     * Retrieve a data entry by id
-     *
-     * @param id
-     */
+    /** @inheritdoc */
     async retrieve(id: SchemaModel[PrimaryKeyField]): Promise<SchemaModelDto> {
         return this.repository.getOneById(id) as unknown as Promise<SchemaModelDto>;
     }
 
-    /**
-     * Retrieve a data entry by filter
-     *
-     * @param filter
-     */
+    /** @inheritdoc */
     async retrieveBy(filter: CustomFilterType): Promise<SchemaModelDto> {
         return this.repository.getOne(
             this.queryFilterToMongoDBFilter(filter)
         ) as unknown as Promise<SchemaModelDto>;
     }
 
-    /**
-     * Update a data entry by id
-     *
-     * @param id - Document ID
-     * @param data - Data to be modified
-     */
+    /** @inheritdoc */
     async update(id: SchemaModel[PrimaryKeyField], data: SchemaModelUpdateDto): Promise<SchemaModelDto> {
         return this.updateBy(
             { [ this.primaryKeyField ]: id } as CustomFilterType,
@@ -151,12 +134,7 @@ export abstract class BaseCRUDLMongooseService<
         );
     }
 
-    /**
-     * Update a data entry by filter
-     *
-     * @param filter - Document filter
-     * @param data - Data to be modified
-     */
+    /** @inheritdoc */
     async updateBy(filter: CustomFilterType, data: SchemaModelUpdateDto): Promise<SchemaModelDto> {
         const self = this.constructor as typeof BaseCRUDLMongooseService;
 
@@ -170,29 +148,17 @@ export abstract class BaseCRUDLMongooseService<
         }
     }
 
-    /**
-     * Delete a data entry by id
-     *
-     * @param id - Document ID
-     */
+    /** @inheritdoc */
     async delete(id: SchemaModel[PrimaryKeyField]): Promise<void> {
         return this.deleteBy({ [ this.primaryKeyField ]: id } as CustomFilterType);
     }
 
-    /**
-     * Delete a data entry by filter
-     *
-     * @param filter - Document filter
-     */
+    /** @inheritdoc */
     async deleteBy(filter: CustomFilterType): Promise<void> {
         return this.repository.delete(this.queryFilterToMongoDBFilter(filter));
     }
 
-    /**
-     * List all data entries
-     *
-     * @param filter - Filter to be applied
-     */
+    /** @inheritdoc */
     async list(filter?: any): Promise<SchemaModelDto[]> {
         return this.repository.find(
             this.queryFilterToMongoDBFilter(filter)
