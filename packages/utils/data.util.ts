@@ -38,7 +38,7 @@ export function updateObjectByDotNotation(
 }
 
 /**
-* Deep merge objects.
+* Deep merge objects, with some added things
 * from https://stackoverflow.com/a/48218209/742249
 *
 * @param objects - Objects to merge
@@ -48,19 +48,19 @@ export function mergeDeep(...objects: any[]): any {
     const isObject = obj => obj && typeof obj === 'object';
 
     return objects.reduce((prev, obj) => {
+        if (obj === undefined || obj === null)
+            return prev;
+
         Object.keys(obj).forEach(key => {
             const pVal = prev[key];
             const oVal = obj[key];
 
-            if (Array.isArray(pVal) && Array.isArray(oVal)) {
+            if (Array.isArray(pVal) && Array.isArray(oVal))
                 prev[key] = pVal.concat(...oVal);
-            }
-            else if (isObject(pVal) && isObject(oVal)) {
+            else if (isObject(pVal) && isObject(oVal))
                 prev[key] = mergeDeep(pVal, oVal);
-            }
-            else {
+            else
                 prev[key] = oVal;
-            }
         });
 
         return prev;
