@@ -12,8 +12,8 @@ import { randomUUID } from 'node:crypto';
  * you must set the `primaryKeyField` property and pass the
  * `PrimeryKeyField` type parameter.
  *
- * @template Model - The model type, must extend `AnyObject`
- * @template PrimeryKeyField - The primary key field name, defaults to 'id'
+ * @typeParam Model - The model type, must extend `AnyObject`
+ * @typeParam PrimeryKeyField - The primary key field name, defaults to 'id'
  * if this changes you must set the `primaryKeyField` property
  */
 export class InMemoryRepository<

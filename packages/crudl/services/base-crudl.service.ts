@@ -13,14 +13,14 @@ export abstract class BaseCRUDLService {
     /**
      * Create a new data entry
      *
-     * @param data - Document data
+     * @param data
      */
     abstract create(data: any): any;
 
     /**
      * Retrieve a data entry by id
      *
-     * @param id - Document ID
+     * @param id - ID value
      */
     abstract retrieve(id: any): any;
 
@@ -28,15 +28,16 @@ export abstract class BaseCRUDLService {
     /**
      * Retrieve a data entry by filter
      *
-     * @param filter
+     * @param filter Filter to be applied to match the
+     * entry.
      */
     abstract retrieveBy(filter: any): any;
 
     /**
      * Update a data entry by id
      *
-     * @param id - Document ID
-     * @param data - Data to be modified
+     * @param id - ID value
+     * @param data
      */
     abstract update(id: any, data: any): any;
 
@@ -44,29 +45,32 @@ export abstract class BaseCRUDLService {
     /**
      * Update a data entry by filter
      *
-     * @param filter - Document filter
-     * @param data - Data to be modified
+     * @param filter - Filter to be applied to match the
+     * entry or entries.
+     * @param data
      */
     abstract updateBy(filter: any, data: any): any;
 
     /**
      * Delete a data entry by id
-     * @param id
+     * @param id - ID value
      */
     abstract delete(id: any): any;
 
     /**
     * Delete a data entry by filter
      *
-    * @param filter
+    * @param filter - Filter to be applied to match the
+    * entry or entries.
     */
     abstract deleteBy(filter: any): any;
 
     /**
      * List all data entries
      *
-     * @param filter - Filter to be applied
-     * @returns List of data entries
+     * @param filter - Filter to be applied to match the
+     * entries.
+     * @returns list of data entries
      */
     abstract list(filter?: any): any;
 }
