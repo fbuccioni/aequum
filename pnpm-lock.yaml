@@ -29,6 +29,9 @@ importers:
       typeorm:
         specifier: '>=0.3.0 || <1.0.0'
         version: 0.3.22(mongodb@6.16.0(socks@2.8.4))(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@22.15.14)(typescript@5.8.3))
+      typeorm-paginate:
+        specifier: github:fbuccioni/typeorm-paginate#package
+        version: https://codeload.github.com/fbuccioni/typeorm-paginate/tar.gz/88f5642a568902e6f6e3c3453fac99f28490a4b1(typeorm@0.3.22(mongodb@6.16.0(socks@2.8.4))(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@22.15.14)(typescript@5.8.3)))
     devDependencies:
       '@eslint/js':
         specifier: ^9.24.0
@@ -3426,6 +3429,12 @@ packages:
     hasBin: true
     peerDependencies:
       typescript: 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x || 5.7.x || 5.8.x
+
+  typeorm-paginate@https://codeload.github.com/fbuccioni/typeorm-paginate/tar.gz/88f5642a568902e6f6e3c3453fac99f28490a4b1:
+    resolution: {tarball: https://codeload.github.com/fbuccioni/typeorm-paginate/tar.gz/88f5642a568902e6f6e3c3453fac99f28490a4b1}
+    version: 4.1.0
+    peerDependencies:
+      typeorm: ^0.3.0
 
   typeorm@0.3.22:
     resolution: {integrity: sha512-P/Tsz3UpJ9+K0oryC0twK5PO27zejLYYwMsE8SISfZc1lVHX+ajigiOyWsKbuXpEFMjD9z7UjLzY3+ElVOMMDA==}
@@ -7461,6 +7470,10 @@ snapshots:
       typescript: 5.8.3
       yaml: 2.8.0
 
+  typeorm-paginate@https://codeload.github.com/fbuccioni/typeorm-paginate/tar.gz/88f5642a568902e6f6e3c3453fac99f28490a4b1(typeorm@0.3.22(mongodb@6.16.0(socks@2.8.4))(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@22.15.14)(typescript@5.8.3))):
+    dependencies:
+      typeorm: 0.3.22(mongodb@6.16.0(socks@2.8.4))(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@22.15.14)(typescript@5.8.3))
+
   typeorm@0.3.22(mongodb@6.16.0(socks@2.8.4))(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@22.15.14)(typescript@5.8.3)):
     dependencies:
       '@sqltools/formatter': 1.2.5
@@ -7468,7 +7481,7 @@ snapshots:
       app-root-path: 3.1.0
       buffer: 6.0.3
       dayjs: 1.11.13
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@5.5.0)
       dotenv: 16.5.0
       glob: 10.4.5
       reflect-metadata: 0.2.2

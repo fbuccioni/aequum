@@ -17,6 +17,8 @@
         "@aequum/crudl": "0.27.4",
         "@aequum/exceptions": "0.27.4",
         "@aequum/paginate-common": "0.27.4",
-        "typeorm": ">=0.3.0 || <1.0.0"
+        "@aequum/utils": "0.27.4",
+        "typeorm": ">=0.3.0 || <1.0.0",
+        "typeorm-paginate": "github:fbuccioni/typeorm-paginate#package"
     }
 }

@@ -1,7 +1,7 @@
 {
   "name": "aequum",
   "title": "The aequum framework",
-  "version": "0.25.5-alpha",
+  "version": "0.27.9",
   "description": "A framrework to build apps common components fast, easy and fair",
   "author": {
     "name": "Felipe Buccioni",
@@ -68,7 +68,8 @@
     "dotenv-expand": "*",
     "mongoose": ">=8.8.0",
     "mongoose-paginate-v2": ">=1.8.0",
-    "typeorm": ">=0.3.0 || <1.0.0"
+    "typeorm": ">=0.3.0 || <1.0.0",
+    "typeorm-paginate": "github:fbuccioni/typeorm-paginate#package"
   },
   "dependencies": {
     "tslib": "^2.8.1"
