@@ -1,20 +1,33 @@
 aequum CRUD/CRUDL operations common components
 ==============================================
 
-This package provides a set of abstract class for application services 
-having hexagonal architecture in mind to facilitate CRUD (Create, Read, 
-Update, Delete) and CRUDL (CRUD with List) operations in a modular way.
-It is designed to work seamlessly with the Aequum framework, leveraging
-its common components and utilities.
+A set of abstract class for application services having hexagonal 
+architecture in mind to facilitate CRUD/CRUDL operations (**C**reate, **R**ead, **U**pdate, **D**elete, **L**ist).
 
-Examples and implementations:
 
-1. [Simple CRUDL service](#example-for-a-simple-crudl-service)
+Components
+----------
+
+## Services
+
+- [`BaseCRUDLService`](https://github.com/fbuccioni/aequum/blob/main/packages/crudl/services/base-crudl.service.ts):
+Abstract class/interface for CRUDL methods, return types and some more.
+- [`BaseCRUDLPaginatedService`](https://github.com/fbuccioni/aequum/blob/main/packages/crudl/services/base-crudl-paginated.service.ts):
+Abstract class/interface extended from `BaseCRUDLService` with a pagination method and return types.
+
+
+Current implementations in the `@aequum` packages
+-------------------------------------------------
+
 2. [Mongoose abstract implementation of CRUDL with pagination service via `@aequum/mongoose` on GitHub](https://github.com/fbuccioni/aequum/blob/main/packages/mongoose/services/paginated/base-crudl-mongoose-paginated.service.ts)
 3. [TypeORM abstract implementation of CRUDL service  via `@aequum/typeorm`on GitHub](https://github.com/fbuccioni/aequum/blob/main/packages/typeorm/services/base-crudl-typeorm.service.ts)
 4. [Users NestJS Implementation in aequum boilerplate on GitHub](https://github.com/fbuccioni/aequum-nestjs-hexa/blob/base%2Bauth%2Bmongoose/src/application/services/users.service.ts)
 
-#### Example for a simple CRUDL service:
+
+Example
+--------
+
+Example for a simple CRUDL service:
 
 ```typescript
 import { BaseCRUDLService } from '@aequum/crudl';
