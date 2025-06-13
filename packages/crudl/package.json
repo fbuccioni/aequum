@@ -2,6 +2,7 @@
     "name": "@aequum/crudl",
     "version": "0.27.13",
     "description": "aequum CRUD/CRUDL operations common components",
+    "keywords": [ "aequum", "hexagonal", "rest", "api", "http", "crudl", "crud" ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {

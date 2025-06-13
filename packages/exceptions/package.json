@@ -2,6 +2,7 @@
     "name": "@aequum/exceptions",
     "version": "0.27.13",
     "description": "aequum common exceptions collection",
+    "kwyqoerds": [ "aequum", "hexagonal", "rest", "api", "http", "exceptions", "error" ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {

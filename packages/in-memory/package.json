@@ -2,6 +2,10 @@
     "name": "@aequum/in-memory",
     "version": "0.27.13",
     "description": "aequum in-memory stuff",
+    "keywords": [ 
+        "aequum", "hexagonal", "rest", "api", "http", "in-memory", "repository", 
+        "crudl", "crud", "pagination"
+    ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {

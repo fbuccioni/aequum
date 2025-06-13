@@ -2,6 +2,10 @@
     "name": "@aequum/typeorm",
     "version": "0.27.13",
     "description": "aequum TypeORM tools for repository, pagination, CRUD/CRUDL, configs and utils ",
+    "keywords": [ 
+        "aequum", "hexagonal", "rest", "api", "http", "typeorm", "repository", 
+        "crudl", "crud", "pagination"
+    ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {

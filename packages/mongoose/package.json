@@ -2,6 +2,10 @@
     "name": "@aequum/mongoose",
     "version": "0.27.13",
     "description": "aequum mongoose tools for repository, pagination, CRUD/CRUDL, configs and utils ",
+    "keywords": [ 
+        "aequum", "hexagonal", "rest", "api", "http", "mongoose", "mongodb", "repository", 
+        "crudl", "crud", "pagination"
+    ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {

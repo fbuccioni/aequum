@@ -1,7 +1,7 @@
 {
   "name": "aequum",
   "title": "The aequum framework",
-  "version": "0.27.13",
+  "version": "0.27.15",
   "description": "A framrework to build apps common components fast, easy and fair",
   "author": {
     "name": "Felipe Buccioni",
