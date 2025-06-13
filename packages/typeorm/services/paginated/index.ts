@@ -1,1 +1,1 @@
-export * from './base-crudl-type-orm-paginated.service';
+export * from './base-crudl-typeorm-paginated.service';

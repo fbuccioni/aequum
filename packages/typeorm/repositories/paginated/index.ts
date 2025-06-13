@@ -1,1 +1,1 @@
-export * from './type-orm-paginated.repository';
+export * from './typeorm-paginated.repository';

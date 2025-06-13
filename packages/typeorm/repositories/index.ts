@@ -1,1 +1,1 @@
-export * from './type-orm.repository';
+export * from './typeorm.repository';

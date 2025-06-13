@@ -15,7 +15,7 @@ import {
 } from "@aequum/paginate-common";
 import { data as dataUtil } from '@aequum/utils';
 
-import { paginate } from '../../utils/paginate.utils';
+import { paginate } from '../../utils/paginate.util';
 
 
 /**
