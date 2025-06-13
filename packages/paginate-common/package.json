@@ -1,8 +1,15 @@
 {
     "name": "@aequum/paginate-common",
-    "version": "0.27.13",
+    "version": "0.27.15",
     "description": "aequum pagination common components",
-    "keywords": [ "aequum", "hexagonal", "rest", "api", "http", "pagination"],
+    "keywords": [
+        "aequum",
+        "hexagonal",
+        "rest",
+        "api",
+        "http",
+        "pagination"
+    ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {

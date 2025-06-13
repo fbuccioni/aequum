@@ -1,10 +1,18 @@
 {
     "name": "@aequum/in-memory",
-    "version": "0.27.13",
+    "version": "0.27.15",
     "description": "aequum in-memory stuff",
-    "keywords": [ 
-        "aequum", "hexagonal", "rest", "api", "http", "in-memory", "repository", 
-        "crudl", "crud", "pagination"
+    "keywords": [
+        "aequum",
+        "hexagonal",
+        "rest",
+        "api",
+        "http",
+        "in-memory",
+        "repository",
+        "crudl",
+        "crud",
+        "pagination"
     ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
@@ -18,9 +26,9 @@
     },
     "license": "Apache-2.0",
     "dependencies": {
-        "@aequum/crudl": "0.27.13",
-        "@aequum/exceptions": "0.27.13",
-        "@aequum/paginate-common": "0.27.13",
-        "@aequum/utils": "0.27.13"
+        "@aequum/crudl": "0.27.15",
+        "@aequum/exceptions": "0.27.15",
+        "@aequum/paginate-common": "0.27.15",
+        "@aequum/utils": "0.27.15"
     }
 }

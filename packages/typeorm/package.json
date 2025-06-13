@@ -1,10 +1,18 @@
 {
     "name": "@aequum/typeorm",
-    "version": "0.27.13",
+    "version": "0.27.15",
     "description": "aequum TypeORM tools for repository, pagination, CRUD/CRUDL, configs and utils ",
-    "keywords": [ 
-        "aequum", "hexagonal", "rest", "api", "http", "typeorm", "repository", 
-        "crudl", "crud", "pagination"
+    "keywords": [
+        "aequum",
+        "hexagonal",
+        "rest",
+        "api",
+        "http",
+        "typeorm",
+        "repository",
+        "crudl",
+        "crud",
+        "pagination"
     ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
@@ -18,10 +26,10 @@
         "access": "public"
     },
     "dependencies": {
-        "@aequum/crudl": "0.27.13",
-        "@aequum/exceptions": "0.27.13",
-        "@aequum/paginate-common": "0.27.13",
-        "@aequum/utils": "0.27.13",
+        "@aequum/crudl": "0.27.15",
+        "@aequum/exceptions": "0.27.15",
+        "@aequum/paginate-common": "0.27.15",
+        "@aequum/utils": "0.27.15",
         "typeorm": ">=0.3.0 || <1.0.0",
         "typeorm-paginate": "github:fbuccioni/typeorm-paginate#package"
     }

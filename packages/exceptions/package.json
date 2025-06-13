@@ -1,8 +1,16 @@
 {
     "name": "@aequum/exceptions",
-    "version": "0.27.13",
+    "version": "0.27.15",
     "description": "aequum common exceptions collection",
-    "kwyqoerds": [ "aequum", "hexagonal", "rest", "api", "http", "exceptions", "error" ],
+    "kwyqoerds": [
+        "aequum",
+        "hexagonal",
+        "rest",
+        "api",
+        "http",
+        "exceptions",
+        "error"
+    ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {
@@ -15,6 +23,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@aequum/utils": "0.27.13"
+        "@aequum/utils": "0.27.15"
     }
 }

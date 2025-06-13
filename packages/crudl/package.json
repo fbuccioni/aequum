@@ -1,8 +1,16 @@
 {
     "name": "@aequum/crudl",
-    "version": "0.27.13",
+    "version": "0.27.15",
     "description": "aequum CRUD/CRUDL operations common components",
-    "keywords": [ "aequum", "hexagonal", "rest", "api", "http", "crudl", "crud" ],
+    "keywords": [
+        "aequum",
+        "hexagonal",
+        "rest",
+        "api",
+        "http",
+        "crudl",
+        "crud"
+    ],
     "author": "Felipe Buccioni",
     "homepage": "https://github.com/fbuccioni/aequum",
     "repository": {
@@ -15,6 +23,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@aequum/paginate-common": "0.27.13"
+        "@aequum/paginate-common": "0.27.15"
     }
 }
