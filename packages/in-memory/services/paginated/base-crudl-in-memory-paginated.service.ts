@@ -1,7 +1,7 @@
 import { PaginateSortBy } from '@aequum/paginate-common';
 import { BaseCRUDLPaginatedService } from '@aequum/crudl';
 
-import { BaseCRUDLInMemoryService } from './base-crudl-in-memory.service';
+import { BaseCRUDLInMemoryService } from '../base-crudl-in-memory.service';
 
 
 export class BaseCRUDLInMemoryPaginatedService<
