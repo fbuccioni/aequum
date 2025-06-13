@@ -8,7 +8,7 @@ import { packagePaths } from '../config';
  * to all the packages.
  */
 function copyMisc(): NodeJS.ReadWriteStream {
-    const miscFiles = src(['README.md', 'LICENSE', '.npmignore']);
+    const miscFiles = src(['LICENSE', '.npmignore']);
     // Since `dest()` does not take a string-array, we have to append it
     // ourselves
     return packagePaths.reduce(
